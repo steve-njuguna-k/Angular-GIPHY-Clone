@@ -1,39 +1,109 @@
-html {
-    margin-left: 50px;
-    margin-right: 50px;
-  }
-  html > * {
-    background: #000;
-  }
-  body > * {
-    padding-top: 10px;
-  }
-  .navbar-brand {
-    font-weight: 900;
-    font-size: 40px;
-  }
-  a {
-    color: #fff;
-  }
-  .nav-item {
-    margin-right: 5px;
-    font-size: 15px;
-  }
-  .nav-link_bottom {
-    height: 3px;
-    background: linear-gradient(45deg, #6157ff, #4975cb);
-  }
-  .nav-link:hover {
-    background: linear-gradient(45deg, #6157ff, #7e48cd);
-    color: #fff;
-  }
-  .search_btn {
-    background: linear-gradient(45deg, #6157ff, #e0409b);
-    outline: none;
-  }
-  .banner_img img {
-    width: 100%;
-  }
-  .trending_gifs {
-    margin: 10px;
+body{
+  background-color: #000;
+  color: #fff;
+  font-family: interface, "Helvetica Neue", helvetica, sans-serif;
+}
+
+a{
+  color: #fff;
+  font-weight: bold;
+}
+
+.navbar.navbar-dark .nav-item .nav-link {
+  color: #fff!important;
+}
+
+.nav-item {
+  margin-right: 5px;
+  font-size: 15px;
+}
+
+.nav-link_bottom {
+  height: 3px;
+  background: linear-gradient(45deg, #6157ff, #4975cb);
+}
+
+.nav-link {
+  color: #fff;
+}
+
+.nav-link:hover {
+  background: linear-gradient(45deg, #6157ff, #7e48cd);
+  color: #fff;
+}
+
+.btn{
+  margin-top: 5px;
+}
+
+.btn-purple{
+  background: linear-gradient(45deg, #6157ff, #4975cb);
+  border-radius: 0px;
+  color: #fff;
+}
+
+.btn-purple:hover{
+  background: linear-gradient(45deg, #6157ff, #4975cb);
+  border-radius: 0px;
+  color: #fff;
+}
+
+.btn-dark{
+  border-radius: 0px;
+}
+
+.btn-dark:hover{
+  border-radius: 0px;
+}
+.search {
+  width: 100%;
+  margin-top: 65px;
+  margin-bottom: auto;
+  height: 50px;
+  background-color: #fff;
+  padding: 10px;
+}
+
+.search-input {
+  color: white;
+  border: 0;
+  outline: 0;
+  background: none;
+  width: 0;
+  margin-top: 5px;
+  caret-color: transparent;
+  line-height: 20px;
+  transition: width 0.4s linear
+}
+
+.search .search-input {
+  padding: 0 10px;
+  width: 100%;
+  caret-color: #536bf6;
+  font-size: 19px;
+  font-weight: 300;
+  color: black;
+  transition: width 0.4s linear
+}
+
+.search-icon {
+  height: 34px;
+  width: 34px;
+  float: right;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background: linear-gradient(45deg, #6157ff, #4975cb);
+  font-size: 10px;
+  bottom: 30px;
+  position: relative;
+}
+
+.search-icon:hover {
+  color: #fff !important
+}
+
+.navbar{
+  background-color: #000;
 }
