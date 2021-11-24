@@ -18,11 +18,15 @@ export class GiphyService {
     return this.http.get<Giphs[]>(`https://api.giphy.com/v1/gifs/search?api_key=${this.apiKey}&q=${this.query}&limit=50&offset=0&rating=G&lang=en`);
   }
 
-  trendingGifs(): Observable<Giphs[]>{
+  getCategories(): Observable<Giphs[]>{
+    return this.http.get<Giphs[]>(`https://api.giphy.com/v1/gifs/categories?api_key=${this.apiKey}`);
+  }
+
+  getTrendingGifs(): Observable<Giphs[]>{
     return this.http.get<Giphs[]>(`https://api.giphy.com/v1/gifs/trending?api_key=${this.apiKey}&limit=50&rating=G`);
   }
   
-  randomGif(): Observable<Giphs[]>{
+  getRandomGif(): Observable<Giphs[]>{
     return this.http.get<Giphs[]>(`https://api.giphy.com/v1/gifs/random?api_key=${this.apiKey}&tag=&rating=G`);
   }
 
