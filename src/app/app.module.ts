@@ -8,12 +8,14 @@ import { GiphyService } from './services/giphy.service';
 import { HttpClientModule } from '@angular/common/http';
 import { GiphyDisplayComponent } from './components/giphy-display/giphy-display.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     GiphyDisplayComponent,
-    NavbarComponent
+    NavbarComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
