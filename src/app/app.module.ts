@@ -7,11 +7,13 @@ import { AppComponent } from './app.component';
 import { GiphyService } from './services/giphy.service';
 import { HttpClientModule } from '@angular/common/http';
 import { GiphyDisplayComponent } from './components/giphy-display/giphy-display.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    GiphyDisplayComponent
+    GiphyDisplayComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
