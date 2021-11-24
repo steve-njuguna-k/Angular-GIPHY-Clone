@@ -6,10 +6,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { GiphyService } from './services/giphy.service';
 import { HttpClientModule } from '@angular/common/http';
+import { GiphyDisplayComponent } from './components/giphy-display/giphy-display.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    GiphyDisplayComponent
   ],
   imports: [
     BrowserModule,
