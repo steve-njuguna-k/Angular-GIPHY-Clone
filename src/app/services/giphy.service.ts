@@ -14,20 +14,20 @@ export class GiphyService {
 
   constructor(private http: HttpClient) { }
 
-  getGifs(): Observable<Giphs[]>{
-    return this.http.get<Giphs[]>(`https://api.giphy.com/v1/gifs/search?api_key=${this.apiKey}&q=${this.query}&limit=50&offset=0&rating=G&lang=en`);
+  getGifs(){
+    return this.http.get(`https://api.giphy.com/v1/gifs/search?api_key=${this.apiKey}&q=${this.query}&limit=50&offset=0&rating=G&lang=en`);
   }
 
   getCategories(){
     return this.http.get(`https://api.giphy.com/v1/gifs/categories?api_key=${this.apiKey}`);
   }
 
-  getTrendingGifs(): Observable<Giphs[]>{
-    return this.http.get<Giphs[]>(`https://api.giphy.com/v1/gifs/trending?api_key=${this.apiKey}&limit=50&rating=G`);
+  getTrendingGifs(){
+    return this.http.get(`https://api.giphy.com/v1/gifs/trending?api_key=${this.apiKey}&limit=50&rating=G`);
   }
   
-  getRandomGif(): Observable<Giphs[]>{
-    return this.http.get<Giphs[]>(`https://api.giphy.com/v1/gifs/random?api_key=${this.apiKey}&tag=&rating=G`);
+  getRandomGif(){
+    return this.http.get(`https://api.giphy.com/v1/gifs/random?api_key=${this.apiKey}&tag=&rating=G`);
   }
 
   searchGif(query:string){
