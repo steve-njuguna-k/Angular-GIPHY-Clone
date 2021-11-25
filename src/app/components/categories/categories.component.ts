@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { GiphyService } from 'src/app/services/giphy.service';
+
 
 @Component({
   selector: 'app-categories',
@@ -7,9 +9,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CategoriesComponent implements OnInit {
 
-  constructor() { }
+  categories: any = [];
+
+  constructor(private service: GiphyService) { }
 
   ngOnInit(): void {
+    this.Categories();
+  }
+
+  Categories(){
+    this.service.getCategories()
+.subscribe((response: any) => {
+        this.categories = response;
+        console.log(this.categories);
+      }
+    );
   }
 
 }

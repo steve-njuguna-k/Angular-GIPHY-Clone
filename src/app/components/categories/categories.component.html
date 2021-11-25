@@ -1,1 +1,13 @@
-<p>categories works!</p>
+<div class="container">
+    <div class="row">
+        <div *ngFor="let category of categories">
+            <div class="col-md-4">
+                <div class="card" style="border: none;">
+                    <a href="{{ category.url }}" target="blank">
+                        <img [src]="category.url" alt="" width="100%">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -109,10 +109,22 @@ a{
 }
 
 .footer {
-  position: fixed;
+  margin-top: 30px;
   left: 0;
   bottom: 0;
   width: 100%;
   color: white;
   text-align: center;
+}
+
+.gifs{
+  padding-top: 30px;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  width: 1000px;
+  margin: 0 auto;
+}
+
+.gif img {
+  max-width: 250px;
 }

@@ -8,21 +8,20 @@ import { GiphyService } from 'src/app/services/giphy.service';
 })
 export class GiphyDisplayComponent implements OnInit {
 
-  allTrendingGifs:any = [];
+  allTrendingGifs:any[] = [];
 
   constructor(private service: GiphyService) { }
 
   ngOnInit(): void {
     this.TrendingGifs();
+    this.service.getGifs()
+      .subscribe((response: any) => {
+        this.allTrendingGifs = response;
+      });
   }
 
   TrendingGifs(){
-    this.service.getTrendingGifs()
-      .subscribe(response => {
-        this.allTrendingGifs = response;
-        console.log(this.allTrendingGifs)
-      }
-    );
+    this.service.getTrendingGifs();
   }
 
 }
