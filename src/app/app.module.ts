@@ -10,6 +10,7 @@ import { GiphyDisplayComponent } from './components/giphy-display/giphy-display.
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { RandomComponent } from './components/random/random.component';
+import { CategoriesComponent } from './components/categories/categories.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { RandomComponent } from './components/random/random.component';
     GiphyDisplayComponent,
     NavbarComponent,
     FooterComponent,
-    RandomComponent
+    RandomComponent,
+    CategoriesComponent
   ],
   imports: [
     BrowserModule,
