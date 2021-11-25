@@ -9,13 +9,15 @@ import { HttpClientModule } from '@angular/common/http';
 import { GiphyDisplayComponent } from './components/giphy-display/giphy-display.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { RandomComponent } from './components/random/random.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     GiphyDisplayComponent,
     NavbarComponent,
-    FooterComponent
+    FooterComponent,
+    RandomComponent
   ],
   imports: [
     BrowserModule,
