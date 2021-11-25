@@ -18,8 +18,8 @@ export class GiphyService {
     return this.http.get<Giphs[]>(`https://api.giphy.com/v1/gifs/search?api_key=${this.apiKey}&q=${this.query}&limit=50&offset=0&rating=G&lang=en`);
   }
 
-  getCategories(): Observable<Giphs[]>{
-    return this.http.get<Giphs[]>(`https://api.giphy.com/v1/gifs/categories?api_key=${this.apiKey}`);
+  getCategories(){
+    return this.http.get(`https://api.giphy.com/v1/gifs/categories?api_key=${this.apiKey}`);
   }
 
   getTrendingGifs(): Observable<Giphs[]>{
