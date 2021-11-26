@@ -9,7 +9,6 @@ import { environment } from 'src/environments/environment';
 export class GiphyService {
 
   private apiKey = environment.apiKey;
-  private query!: string;
   gifs = new BehaviorSubject<any>([])
   categories = new BehaviorSubject<any>([])
   random = new BehaviorSubject<any>([])
@@ -28,8 +27,11 @@ export class GiphyService {
     return this.random.asObservable();
   }
   
-  searchGifs(){
-    return this.http.get(`https://api.giphy.com/v1/gifs/search?api_key=${this.apiKey}&q=${this.query}&limit=50&offset=0&rating=G&lang=en`);
+  searchGifs(query:string){
+    return this.http.get(`https://api.giphy.com/v1/gifs/search?api_key=${this.apiKey}&q=${query}&limit=50&offset=0&rating=G&lang=en`)
+    .subscribe((response: any)=>{
+      this.gifs.next(response.data)
+    });
   }
 
   getCategories(){
@@ -51,10 +53,6 @@ export class GiphyService {
     .subscribe((response: any) => {
       this.random.next(response.data);
     });
-  }
-
-  searchGif(query:string){
-    this.query = query;
   }
 
 }
