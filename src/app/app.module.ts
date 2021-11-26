@@ -6,24 +6,24 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { GiphyService } from './services/giphy.service';
 import { HttpClientModule } from '@angular/common/http';
-import { GiphyDisplayComponent } from './components/giphy-display/giphy-display.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { RandomComponent } from './components/random/random.component';
 import { CategoriesComponent } from './components/categories/categories.component';
 import { SearchComponent } from './components/search/search.component';
 import { TrendingComponent } from './components/trending/trending.component';
+import { MainPageComponent } from './components/main-page/main-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    GiphyDisplayComponent,
     NavbarComponent,
     FooterComponent,
     RandomComponent,
     CategoriesComponent,
     SearchComponent,
-    TrendingComponent
+    TrendingComponent,
+    MainPageComponent
   ],
   imports: [
     BrowserModule,
