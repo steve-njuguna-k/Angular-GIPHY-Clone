@@ -11,11 +11,16 @@ export class GiphyService {
   private apiKey = environment.apiKey;
   private query!: string;
   gifs = new BehaviorSubject<any>([])
+  categories = new BehaviorSubject<any>([])
 
   constructor(private http: HttpClient) { }
 
-  getGifs() {
+  allGifs() {
     return this.gifs.asObservable();
+  }
+
+  allCategories() {
+    return this.categories.asObservable();
   }
 
   searchGifs(){
@@ -23,7 +28,10 @@ export class GiphyService {
   }
 
   getCategories(){
-    return this.http.get(`https://api.giphy.com/v1/gifs/categories?api_key=${this.apiKey}`);
+    return this.http.get(`https://api.giphy.com/v1/gifs/categories?api_key=${this.apiKey}`)
+    .subscribe((response: any) => {
+      this.categories.next(response.data);
+    });
   }
 
   getTrendingGifs(){

@@ -9,16 +9,22 @@ import { GiphyService } from 'src/app/services/giphy.service';
 })
 export class CategoriesComponent implements OnInit {
 
-  categories: any = [];
+  categories: any[] = [];
 
   constructor(private service: GiphyService) { }
 
   ngOnInit(): void {
-    this.service.getCategories()
+    this.GifCategories();
+    this.service.allCategories()
       .subscribe((response: any) => {
         this.categories = response;
         console.log(this.categories)
-      });
+      }
+    );
+  }
+
+  GifCategories(){
+    this.service.getCategories();
   }
 
 }

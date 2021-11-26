@@ -14,10 +14,12 @@ export class GiphyDisplayComponent implements OnInit {
 
   ngOnInit(): void {
     this.TrendingGifs();
-    this.service.getGifs()
+    this.service.allGifs()
       .subscribe((response: any) => {
         this.allTrendingGifs = response;
-      });
+        console.log(this.allTrendingGifs)
+      }
+    );
   }
 
   TrendingGifs(){
