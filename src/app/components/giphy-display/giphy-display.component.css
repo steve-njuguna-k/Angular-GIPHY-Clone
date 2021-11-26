@@ -1,0 +1,49 @@
+.link-one a{
+    text-decoration: none;
+    color: #57ff65;
+}
+
+.link-one a:hover{
+    text-decoration: none;
+    color: #57ff65;
+}
+
+.link-two a{
+    text-decoration: none;
+    color: #fcb800;
+}
+
+.link-two a:hover{
+    text-decoration: none;
+    color: #fcb800;
+}
+
+.gif-container {
+    margin: auto;
+    margin-top: 60px;
+}
+  
+.row {
+    text-align: center;
+}
+  
+img{
+    height:15em;
+    width: 100%;
+}
+  
+.gif-title{
+    font-size: 12px;
+}
+  
+.img-fluid{
+    border-radius: 20px;
+}
+
+.gifs{
+    margin-bottom: 10px;
+}
+
+.link-one, .link-two{
+    font-size: 15px;
+}

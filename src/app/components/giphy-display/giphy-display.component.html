@@ -1,0 +1,22 @@
+<div class="container gif-container">
+    <h3 class="py-4"><b>Trending Gifs</b> | <span class="link-one"><a [routerLink]="['trending']" routerLinkActive="router-link-active" >View All</a></span></h3>
+    <div class="row">
+      <div class="col-md-3 gifs" *ngFor="let gif of  allTrendingGifs | slice:0:4;">
+        <a href="{{ gif.url }}" target="_blank">
+            <img [src]="gif.images.downsized.url" class="img-fluid" alt="...">
+        </a>
+        <h6 class="text-center py-2 gif-title">{{ gif.title | titlecase }}</h6>
+      </div>
+    </div>
+</div>
+<div class="container">
+    <h3 class="py-4"><b>Gif Categories</b> | <span class="link-two"><a [routerLink]="['categories']" routerLinkActive="router-link-active" >View All</a></span></h3>
+    <div class="row">
+      <div class="col-md-3 gifs" *ngFor="let gif of  allGifCategories | slice:0:4;">
+        <a href="{{ gif.gif.url }}" target="_blank">
+            <img [src]="gif.gif.images.downsized.url" class="img-fluid" alt="...">
+        </a>
+        <h6 class="text-center py-2 gif-title">{{ gif.name | titlecase }}</h6>
+      </div>
+    </div>
+</div>
