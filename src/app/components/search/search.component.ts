@@ -9,10 +9,17 @@ import { GiphyService } from 'src/app/services/giphy.service';
 export class SearchComponent implements OnInit {
 
   searchQuery!: string;
+  allTrendingGifs:any[] = [];
 
   constructor(private service: GiphyService) { }
 
   ngOnInit(): void {
+    this.service.getGifSearch()
+      .subscribe((response: any) => {
+        this.allTrendingGifs = response;
+        console.log(this.allTrendingGifs)
+      }
+    );
   }
 
   search(searchTerm: string)

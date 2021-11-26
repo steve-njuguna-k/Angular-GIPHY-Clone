@@ -1,0 +1,25 @@
+.gif-container {
+    margin: auto;
+    margin-top: 60px;
+}
+  
+.row {
+    text-align: center;
+}
+  
+img{
+    height:15em;
+    width: 100%;
+}
+  
+.gif-title{
+    font-size: 12px;
+}
+  
+.img-fluid{
+    border-radius: 20px;
+}
+
+.gifs{
+    margin-bottom: 10px;
+}
