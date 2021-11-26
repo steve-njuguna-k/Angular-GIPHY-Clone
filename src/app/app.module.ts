@@ -11,7 +11,6 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { RandomComponent } from './components/random/random.component';
 import { CategoriesComponent } from './components/categories/categories.component';
-import { SubcategoriesComponent } from './components/subcategories/subcategories.component';
 
 @NgModule({
   declarations: [
@@ -20,8 +19,7 @@ import { SubcategoriesComponent } from './components/subcategories/subcategories
     NavbarComponent,
     FooterComponent,
     RandomComponent,
-    CategoriesComponent,
-    SubcategoriesComponent
+    CategoriesComponent
   ],
   imports: [
     BrowserModule,

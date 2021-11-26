@@ -22,7 +22,7 @@ export class GiphyService {
   allCategories() {
     return this.categories.asObservable();
   }
-
+  
   searchGifs(){
     return this.http.get(`https://api.giphy.com/v1/gifs/search?api_key=${this.apiKey}&q=${this.query}&limit=50&offset=0&rating=G&lang=en`);
   }
