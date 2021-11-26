@@ -18,17 +18,22 @@ a{
   font-size: 15px;
 }
 
-.nav-link_bottom {
+.nav-link_bottom_one {
   height: 3px;
-  background: linear-gradient(45deg, #6157ff, #4975cb);
+  background: linear-gradient(45deg, #ff4343, #ff4343);
+}
+
+.nav-link_bottom_two {
+  height: 3px;
+  background: linear-gradient(45deg, #57ff6d, #57ff6d);
+}
+
+.nav-link_bottom_three {
+  height: 3px;
+  background: linear-gradient(45deg, #fcb800, #fcb800);
 }
 
 .nav-link {
-  color: #fff;
-}
-
-.nav-link:hover {
-  background: linear-gradient(45deg, #6157ff, #7e48cd);
   color: #fff;
 }
 
@@ -36,6 +41,16 @@ a{
   margin-top: 5px;
   margin-left: 5px;
   margin-right: 5px;
+}
+
+.btn-primary{
+  border-radius: 0px;
+  color: #fff;
+}
+
+.btn-primary:hover{
+  border-radius: 0px;
+  color: #fff;
 }
 
 .btn-purple{
