@@ -12,6 +12,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { RandomComponent } from './components/random/random.component';
 import { CategoriesComponent } from './components/categories/categories.component';
 import { SearchComponent } from './components/search/search.component';
+import { TrendingComponent } from './components/trending/trending.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { SearchComponent } from './components/search/search.component';
     FooterComponent,
     RandomComponent,
     CategoriesComponent,
-    SearchComponent
+    SearchComponent,
+    TrendingComponent
   ],
   imports: [
     BrowserModule,
