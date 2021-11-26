@@ -14,16 +14,11 @@ export class CategoriesComponent implements OnInit {
   constructor(private service: GiphyService) { }
 
   ngOnInit(): void {
-    this.Categories();
-  }
-
-  Categories(){
     this.service.getCategories()
-.subscribe((response: any) => {
+      .subscribe((response: any) => {
         this.categories = response;
-        console.log(this.categories);
-      }
-    );
+        console.log(this.categories)
+      });
   }
 
 }
