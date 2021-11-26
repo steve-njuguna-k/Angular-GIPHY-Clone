@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { GiphyService } from 'src/app/services/giphy.service';
 
 @Component({
   selector: 'app-random',
@@ -7,9 +8,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RandomComponent implements OnInit {
 
-  constructor() { }
+  randomGif: any;
+
+  constructor(private service: GiphyService) { }
 
   ngOnInit(): void {
+    this.GetRandomGif();
+    this.service.randomGif()
+      .subscribe((response: any) => {
+        this.randomGif = response;
+        console.log(this.randomGif)
+      }
+    );
+  }
+
+  GetRandomGif(){
+    this.service.getRandomGif();
   }
 
 }

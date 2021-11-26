@@ -12,6 +12,7 @@ export class GiphyService {
   private query!: string;
   gifs = new BehaviorSubject<any>([])
   categories = new BehaviorSubject<any>([])
+  random = new BehaviorSubject<any>([])
 
   constructor(private http: HttpClient) { }
 
@@ -21,6 +22,10 @@ export class GiphyService {
 
   allCategories() {
     return this.categories.asObservable();
+  }
+
+  randomGif() {
+    return this.random.asObservable();
   }
   
   searchGifs(){
@@ -42,7 +47,10 @@ export class GiphyService {
   }
   
   getRandomGif(){
-    return this.http.get(`https://api.giphy.com/v1/gifs/random?api_key=${this.apiKey}&tag=&rating=G`);
+    return this.http.get(`https://api.giphy.com/v1/gifs/random?api_key=${this.apiKey}&tag=&rating=G`)
+    .subscribe((response: any) => {
+      this.random.next(response.data);
+    });
   }
 
   searchGif(query:string){
